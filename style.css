@@ -19,20 +19,15 @@ h1 {
   margin-top: 20px;
 }
 
-button {
-  background-color: #f5a623;
-  color: white;
-  font-size: 20px;
-  border: none;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
+#coinImage {
+  width: 100px; /* Taille de la pièce */
+  height: 100px; /* Taille de la pièce */
+  cursor: pointer; /* Pour que l'image ressemble à un bouton cliquable */
   transition: transform 0.1s;
 }
 
-button:hover {
-  background-color: #f57c00;
-  transform: scale(1.1);
+#coinImage:hover {
+  transform: scale(1.1); /* Animation lors du survol */
 }
 
 #coinCount, #autoClickerCount {
@@ -48,19 +43,4 @@ button:hover {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-@keyframes coinClickAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.click-animation {
-  animation: coinClickAnimation 0.2s ease-in-out;
 }
