@@ -3,7 +3,7 @@ let autoClickerCount = 0;
 let autoClickerPrice = 50;
 let autoClickerInterval;
 
-const coinButton = document.getElementById('coinButton');
+const coinImage = document.getElementById('coinImage');
 const coinCountDisplay = document.getElementById('coinCount');
 const autoClickerDisplay = document.getElementById('autoClickerCount');
 const buyAutoClickerButton = document.getElementById('buyAutoClicker');
@@ -17,8 +17,8 @@ if (localStorage.getItem('coinCount')) {
 // Mettre à jour l'affichage initial
 updateDisplay();
 
-// Fonction pour gérer le clic sur la pièce
-coinButton.addEventListener('click', () => {
+// Fonction pour gérer le clic sur l'image de la pièce
+coinImage.addEventListener('click', () => {
   coinCount++;
   updateDisplay();
   saveProgress();
@@ -71,10 +71,10 @@ function saveProgress() {
   localStorage.setItem('autoClickerCount', autoClickerCount);
 }
 
-// Animation de clic sur la pièce
+// Animation de clic sur l'image de la pièce
 function animateCoinClick() {
-  coinButton.classList.add('click-animation');
+  coinImage.classList.add('click-animation');
   setTimeout(() => {
-    coinButton.classList.remove('click-animation');
+    coinImage.classList.remove('click-animation');
   }, 100);
 }
